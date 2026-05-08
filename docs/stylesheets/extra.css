@@ -1,0 +1,185 @@
+/* ── Exact callMechanic brand orange (#F97316) ── */
+:root {
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fb923c;
+  --md-primary-fg-color--dark: #ea580c;
+  --md-accent-fg-color: #f97316;
+}
+
+[data-md-color-scheme='slate'] {
+  --md-primary-fg-color: #f97316;
+  --md-default-bg-color: #0b1220;
+  --md-default-bg-color--light: #1e293b;
+}
+
+/* ── Hero block ── */
+.hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  border-radius: 20px;
+  padding: 56px 36px;
+  text-align: center;
+  margin: 24px 0 32px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.25),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.15),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0 0 8px;
+  color: #f8fafc;
+  letter-spacing: -1px;
+}
+.hero .tagline {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fed7aa;
+  margin-bottom: 24px;
+}
+.hero .sub {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+.hero .vehicle-row {
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin-top: 16px;
+}
+
+/* ── Feature grid ── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.feature-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15);
+}
+.feature-card .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.feature-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--md-default-fg-color);
+}
+.feature-card p {
+  font-size: 13px;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Vehicle chips ── */
+.vehicle-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+.vehicle-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+[data-md-color-scheme='slate'] .vehicle-chip {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.3);
+  color: #f8fafc;
+}
+.vehicle-chip .e {
+  font-size: 18px;
+}
+
+/* ── Pill buttons ── */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 24px 0;
+}
+.pill-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #f97316;
+  color: white !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  border-radius: 999px;
+  transition: transform 0.15s, box-shadow 0.2s;
+  border: none;
+}
+.pill-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.4);
+}
+.pill-btn--outline {
+  background: transparent;
+  color: #f97316 !important;
+  border: 2px solid #f97316;
+}
+
+/* ── Section spacers ── */
+.section-spacer {
+  height: 32px;
+}
+
+/* ── Tighter typography on the landing page ── */
+.md-typeset h2 {
+  font-weight: 800;
+  margin-top: 2.5rem;
+}
+.md-typeset h3 {
+  font-weight: 700;
+}
